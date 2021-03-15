@@ -6,8 +6,8 @@
  * @link       z-website.ru
  * @since      1.0.0
  *
- * @package    Testimonial
- * @subpackage Testimonial/includes
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Testimonial
- * @subpackage Testimonial/includes
- * @author     Gladkov Denis <info@z-website.ru>
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
+ * @author     Gladkov Denis <web@dgladkov.ru>
  */
-class Testimonial_Loader {
+class Testimonial_zw_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

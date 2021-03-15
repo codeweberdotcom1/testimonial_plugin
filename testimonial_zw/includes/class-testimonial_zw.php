@@ -9,8 +9,8 @@
  * @link       z-website.ru
  * @since      1.0.0
  *
- * @package    Testimonial
- * @subpackage Testimonial/includes
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Testimonial
- * @subpackage Testimonial/includes
- * @author     Gladkov Denis <info@z-website.ru>
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
+ * @author     Gladkov Denis <web@dgladkov.ru>
  */
-class Testimonial {
+class Testimonial_zw {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Testimonial {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Testimonial_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Testimonial_zw_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -67,12 +67,12 @@ class Testimonial {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'TESTIMONIAL_VERSION' ) ) {
-			$this->version = TESTIMONIAL_VERSION;
+		if ( defined( 'TESTIMONIAL_ZW_VERSION' ) ) {
+			$this->version = TESTIMONIAL_ZW_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'testimonial';
+		$this->plugin_name = 'testimonial_zw';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Testimonial {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Testimonial_Loader. Orchestrates the hooks of the plugin.
-	 * - Testimonial_i18n. Defines internationalization functionality.
-	 * - Testimonial_Admin. Defines all hooks for the admin area.
-	 * - Testimonial_Public. Defines all hooks for the public side of the site.
+	 * - Testimonial_zw_Loader. Orchestrates the hooks of the plugin.
+	 * - Testimonial_zw_i18n. Defines internationalization functionality.
+	 * - Testimonial_zw_Admin. Defines all hooks for the admin area.
+	 * - Testimonial_zw_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,33 +103,33 @@ class Testimonial {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-testimonial-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-testimonial_zw-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-testimonial-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-testimonial_zw-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-testimonial-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-testimonial_zw-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-testimonial-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-testimonial_zw-public.php';
 
-		$this->loader = new Testimonial_Loader();
+		$this->loader = new Testimonial_zw_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Testimonial_i18n class in order to set the domain and to register the hook
+	 * Uses the Testimonial_zw_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Testimonial {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Testimonial_i18n();
+		$plugin_i18n = new Testimonial_zw_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class Testimonial {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Testimonial_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Testimonial_zw_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,7 +168,7 @@ class Testimonial {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Testimonial_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Testimonial_zw_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -199,7 +199,7 @@ class Testimonial {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Testimonial_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Testimonial_zw_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

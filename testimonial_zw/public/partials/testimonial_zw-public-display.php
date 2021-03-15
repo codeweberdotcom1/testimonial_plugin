@@ -8,8 +8,8 @@
  * @link       z-website.ru
  * @since      1.0.0
  *
- * @package    Testimonial
- * @subpackage Testimonial/public/partials
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/public/partials
  */
 ?>
 

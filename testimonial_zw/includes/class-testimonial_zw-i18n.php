@@ -9,8 +9,8 @@
  * @link       z-website.ru
  * @since      1.0.0
  *
- * @package    Testimonial
- * @subpackage Testimonial/includes
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Testimonial
- * @subpackage Testimonial/includes
- * @author     Gladkov Denis <info@z-website.ru>
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
+ * @author     Gladkov Denis <web@dgladkov.ru>
  */
-class Testimonial_i18n {
+class Testimonial_zw_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Testimonial_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'testimonial',
+			'testimonial_zw',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

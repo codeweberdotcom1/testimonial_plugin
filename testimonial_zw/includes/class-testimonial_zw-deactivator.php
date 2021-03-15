@@ -6,8 +6,8 @@
  * @link       z-website.ru
  * @since      1.0.0
  *
- * @package    Testimonial
- * @subpackage Testimonial/includes
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Testimonial
- * @subpackage Testimonial/includes
- * @author     Gladkov Denis <info@z-website.ru>
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/includes
+ * @author     Gladkov Denis <web@dgladkov.ru>
  */
-class Testimonial_Deactivator {
+class Testimonial_zw_Deactivator {
 
 	/**
 	 * Short Description. (use period)

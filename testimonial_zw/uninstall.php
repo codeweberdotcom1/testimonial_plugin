@@ -22,7 +22,7 @@
  * @link       z-website.ru
  * @since      1.0.0
  *
- * @package    Testimonial
+ * @package    Testimonial_zw
  */
 
 // If uninstall not called from WordPress, then exit.

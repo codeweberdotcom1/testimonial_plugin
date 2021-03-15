@@ -6,8 +6,8 @@
  * @link       z-website.ru
  * @since      1.0.0
  *
- * @package    Testimonial
- * @subpackage Testimonial/public
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Testimonial
- * @subpackage Testimonial/public
- * @author     Gladkov Denis <info@z-website.ru>
+ * @package    Testimonial_zw
+ * @subpackage Testimonial_zw/public
+ * @author     Gladkov Denis <web@dgladkov.ru>
  */
-class Testimonial_Public {
+class Testimonial_zw_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,15 +65,15 @@ class Testimonial_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Testimonial_Loader as all of the hooks are defined
+		 * defined in Testimonial_zw_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Testimonial_Loader will then create the relationship
+		 * The Testimonial_zw_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/testimonial-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/testimonial_zw-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Testimonial_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Testimonial_Loader as all of the hooks are defined
+		 * defined in Testimonial_zw_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Testimonial_Loader will then create the relationship
+		 * The Testimonial_zw_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/testimonial-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/testimonial_zw-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
