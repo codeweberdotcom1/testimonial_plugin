@@ -99,7 +99,7 @@ class Testimonial_zw_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/testimonial_zw-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
-	
+
 
 /**
      * Register the administration menu for this plugin into the WordPress Dashboard menu.
@@ -110,7 +110,7 @@ class Testimonial_zw_Admin {
      /*
       * Add a settings page for this plugin to the Settings menu.
      */
-        add_options_page( 'My plugin and Base Options Functions Setup', 'My plugin', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
+        add_options_page( 'My plugin and Base Options Functions Setup', 'Testimonials', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
         );
     }
 
