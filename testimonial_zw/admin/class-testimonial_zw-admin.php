@@ -53,6 +53,15 @@ class Testimonial_zw_Admin {
 		$this->version = $version;
 
 	}
+	
+	/**
+   * Validate options
+   */
+   public function validate($input) {
+     $valid = array();
+     $valid['footer_text'] = (isset($input['footer_text']) && !empty($input['footer_text'])) ? $input['footer_text'] : '';
+     return $valid;
+   }
 
 	/**
 	 * Register the stylesheets for the admin area.
@@ -110,7 +119,7 @@ class Testimonial_zw_Admin {
      /*
       * Add a settings page for this plugin to the Settings menu.
      */
-        add_options_page( 'My plugin and Base Options Functions Setup', 'Testimonials', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
+        add_options_page( 'Testimonial Options', 'Testimonials', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
         );
     }
 
