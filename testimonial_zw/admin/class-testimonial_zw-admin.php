@@ -53,7 +53,7 @@ class Testimonial_zw_Admin {
 		$this->version = $version;
 
 	}
-	
+
 	/**
    * Validate options
    */
@@ -62,6 +62,13 @@ class Testimonial_zw_Admin {
      $valid['footer_text'] = (isset($input['footer_text']) && !empty($input['footer_text'])) ? $input['footer_text'] : '';
      return $valid;
    }
+   /**
+     * Update all options
+     */
+    public function options_update() {
+        register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
+    }
+
 
 	/**
 	 * Register the stylesheets for the admin area.
@@ -145,6 +152,7 @@ class Testimonial_zw_Admin {
         include_once( 'partials/testimonial_zw-admin-display.php' );
         
     }
+
 
 }
 
