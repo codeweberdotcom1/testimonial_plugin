@@ -152,9 +152,7 @@ class Testimonial_zw_Admin {
         include_once( 'partials/testimonial_zw-admin-display.php' );
         
     }
-
-}
-/**
+    /**
 * Creates a new custom post type
 *
 * @since 1.0.0
@@ -200,3 +198,6 @@ $opts['labels']['singular_name'] = esc_html__( $single, 'wisdom' );
 $opts['labels']['view_item'] = esc_html__( "View {$single}", 'wisdom' );
 register_post_type( strtolower( $cpt_name ), $opts );
 } // new_cpt_job()
+
+
+}
