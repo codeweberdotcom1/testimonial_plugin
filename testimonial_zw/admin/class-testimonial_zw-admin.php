@@ -156,30 +156,3 @@ class Testimonial_zw_Admin {
 
 
 }
-
-function create_posttype() {
-  $args = array(
-    'labels' =&gt; array(
-      'name' =&gt; __('Testimonials'),
-      'singular_name' =&gt; __('Testimonials'),
-      'all_items' =&gt; __('All Testimonials'),
-      'add_new_item' =&gt; __('Add New Testimonial'),
-      'edit_item' =&gt; __('Edit Testimonial'),
-      'view_item' =&gt; __('View Testimonial')
-    ),
-    'public' =&gt; true,
-    'has_archive' =&gt; true,
-    'rewrite' =&gt; array('slug' =&gt; 'testimonials'),
-    'show_ui' =&gt; true,
-    'show_in_menu' =&gt; true,
-    'show_in_nav_menus' =&gt; true,
-    'capability_type' =&gt; 'page',
-    'supports' =&gt; array('title', 'editor', 'thumbnail'),
-    'exclude_from_search' =&gt; true,
-    'menu_position' =&gt; 80,
-    'has_archive' =&gt; true,
-    'menu_icon' =&gt; 'dashicons-format-status'
-    );
-  register_post_type('testimonials', $args);
-}
-add_action( 'init', 'create_posttype');
