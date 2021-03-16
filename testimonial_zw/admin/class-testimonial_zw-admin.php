@@ -154,6 +154,9 @@ class Testimonial_zw_Admin {
         
     }
 
+
+}
+
 function create_posttype() {
   $args = array(
     'labels' =&gt; array(
@@ -180,6 +183,3 @@ function create_posttype() {
   register_post_type('testimonials', $args);
 }
 add_action( 'init', 'create_posttype');
-}
-
-
