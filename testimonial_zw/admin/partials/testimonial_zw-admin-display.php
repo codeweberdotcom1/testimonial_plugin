@@ -17,7 +17,7 @@
 	 * @since  1.0.0
 	 */
 	public function display_options_page() {
-		include_once 'partials/testimonial_zw-admin-display.php';
+		include_once 'admin/partials/testimonial_zw-admin-display.php';
 	}
 ?>
 
