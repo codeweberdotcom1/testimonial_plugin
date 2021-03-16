@@ -1,1 +1,3 @@
-my-plugin-admin-display.php
+<?php 
+echo 'Test';
+?>
