@@ -70,7 +70,6 @@ class Testimonial_zw_Admin {
     }
 
 
-
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
@@ -153,7 +152,6 @@ class Testimonial_zw_Admin {
         include_once( 'partials/testimonial_zw-admin-display.php' );
         
     }
-
 
 }
 

@@ -100,6 +100,4 @@ class Testimonial_zw_Public {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/testimonial_zw-public.js', array( 'jquery' ), $this->version, false );
 
 	}
-
-
 }
