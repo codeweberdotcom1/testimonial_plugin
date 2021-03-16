@@ -51,6 +51,7 @@ class Testimonial_zw_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+		$this->my_plugin_options = get_option($this->plugin_name);
 
 	}
 
@@ -68,6 +69,7 @@ class Testimonial_zw_Admin {
     public function options_update() {
         register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
     }
+
 
 
 	/**

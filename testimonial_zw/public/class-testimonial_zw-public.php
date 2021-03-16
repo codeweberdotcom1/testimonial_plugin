@@ -51,6 +51,8 @@ class Testimonial_zw_Public {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+		  $this->my_plugin_options = get_option($this->plugin_name);
+
 
 	}
 
@@ -99,5 +101,17 @@ class Testimonial_zw_Public {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/testimonial_zw-public.js', array( 'jquery' ), $this->version, false );
 
 	}
+	/**
+  * The function of adding text to the footer
+  */
+
+  public function add_text_footer(){
+
+   if( !empty($this->my_plugin_options['footer_text']) )
+     {
+        echo '<h3 class="center">'.$this->my_plugin_options['footer_text'].'</h3>';
+     }
+  }
+
 
 }
