@@ -11,6 +11,14 @@
  * @package    Testimonial_zw
  * @subpackage Testimonial_zw/admin/partials
  */
+/**
+	 * Render the options page for plugin
+	 *
+	 * @since  1.0.0
+	 */
+	public function display_options_page() {
+		include_once 'partials/testimonial_zw-admin-display.php';
+	}
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->

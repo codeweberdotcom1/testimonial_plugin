@@ -101,7 +101,15 @@ class Testimonial_zw_Admin {
 	}
 
 }
-public function add_options_page() {
+
+/**
+	 * Add an options page under the Settings submenu
+	 *
+	 * @since  1.0.0
+	 */
+	
+
+	public function add_options_page() {
 	
 		$this->plugin_screen_hook_suffix = add_options_page(
 			__( 'Testimonial_zw Settings', 'testimonial_zw' ),
@@ -112,9 +120,3 @@ public function add_options_page() {
 		);
 	
 	}
-/**
-	 * Add an options page under the Settings submenu
-	 *
-	 * @since  1.0.0
-	 */
-	
