@@ -78,7 +78,7 @@ class Testimonial_zw {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-		
+
 
 	}
 
@@ -167,6 +167,8 @@ class Testimonial_zw {
    // Save/Update our plugin options
    $this->loader->add_action('admin_init', $plugin_admin, 'options_update');
 	}
+
+	$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_rdm_quote' );
 
 	/**
 	 * Register all of the hooks related to the public-facing functionality

@@ -161,7 +161,7 @@ class Testimonial_zw_Admin {
 * @access public
 * @uses register_post_type()
 */
-public static function new_cpt_testimonial_zw() {
+public static function new_cpt_rdm_quote() {
 $cap_type = 'post';
 $plural = 'Random Quotes';
 $single = 'Random Quote';
