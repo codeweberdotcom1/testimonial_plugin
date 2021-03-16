@@ -159,10 +159,10 @@ class Testimonial_zw_Admin {
 * @access public
 * @uses register_post_type()
 */
-public static function new_cpt_rdm_quote() {
+public static function new_testimonial_zw() {
 $cap_type = 'post';
-$plural = 'Random Quotes';
-$single = 'Random Quote';
+$plural = 'Testimonials';
+$single = 'Testimonial';
 $cpt_name = 'rdm-quote';
 $opts['can_export'] = TRUE;
 $opts['capability_type'] = $cap_type;

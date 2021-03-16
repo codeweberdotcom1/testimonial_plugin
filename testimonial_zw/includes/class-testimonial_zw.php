@@ -167,7 +167,7 @@ class Testimonial_zw {
    // Save/Update our plugin options
    $this->loader->add_action('admin_init', $plugin_admin, 'options_update');
 
-   $this->loader->add_action( 'init', $plugin_admin, 'new_cpt_rdm_quote' );
+   $this->loader->add_action( 'init', $plugin_admin, 'new_testimonial_zw' );
 
 	}
 
