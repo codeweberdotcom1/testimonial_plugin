@@ -154,5 +154,49 @@ class Testimonial_zw_Admin {
     }
 
 }
+/**
+* Creates a new custom post type
+*
+* @since 1.0.0
+* @access public
+* @uses register_post_type()
+*/
+public static function new_cpt_testimonial_zw() {
+$cap_type = 'post';
+$plural = 'Random Quotes';
+$single = 'Random Quote';
+$cpt_name = 'rdm-quote';
+$opts['can_export'] = TRUE;
+$opts['capability_type'] = $cap_type;
+$opts['description'] = '';
+$opts['exclude_from_search'] = FALSE;
+$opts['has_archive'] = FALSE;
+$opts['hierarchical'] = FALSE;
+$opts['map_meta_cap'] = TRUE;
+$opts['menu_icon'] = 'dashicons-businessman';
+$opts['menu_position'] = 25;
+$opts['public'] = TRUE;
+$opts['publicly_querable'] = TRUE;
+$opts['query_var'] = TRUE;
+$opts['register_meta_box_cb'] = '';
+$opts['rewrite'] = FALSE;
+$opts['show_in_admin_bar'] = TRUE;
+$opts['show_in_menu'] = TRUE;
+$opts['show_in_nav_menu'] = TRUE;
 
-
+$opts['labels']['add_new'] = esc_html__( "Add New {$single}", 'wisdom' );
+$opts['labels']['add_new_item'] = esc_html__( "Add New {$single}", 'wisdom' );
+$opts['labels']['all_items'] = esc_html__( $plural, 'wisdom' );
+$opts['labels']['edit_item'] = esc_html__( "Edit {$single}" , 'wisdom' );
+$opts['labels']['menu_name'] = esc_html__( $plural, 'wisdom' );
+$opts['labels']['name'] = esc_html__( $plural, 'wisdom' );
+$opts['labels']['name_admin_bar'] = esc_html__( $single, 'wisdom' );
+$opts['labels']['new_item'] = esc_html__( "New {$single}", 'wisdom' );
+$opts['labels']['not_found'] = esc_html__( "No {$plural} Found", 'wisdom' );
+$opts['labels']['not_found_in_trash'] = esc_html__( "No {$plural} Found in Trash", 'wisdom' );
+$opts['labels']['parent_item_colon'] = esc_html__( "Parent {$plural} :", 'wisdom' );
+$opts['labels']['search_items'] = esc_html__( "Search {$plural}", 'wisdom' );
+$opts['labels']['singular_name'] = esc_html__( $single, 'wisdom' );
+$opts['labels']['view_item'] = esc_html__( "View {$single}", 'wisdom' );
+register_post_type( strtolower( $cpt_name ), $opts );
+} // new_cpt_job()
