@@ -199,5 +199,4 @@ $opts['labels']['view_item'] = esc_html__( "View {$single}", 'wisdom' );
 register_post_type( strtolower( $cpt_name ), $opts );
 } // new_cpt_job()
 
-
 }

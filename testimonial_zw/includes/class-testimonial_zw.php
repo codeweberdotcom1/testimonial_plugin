@@ -170,6 +170,7 @@ class Testimonial_zw {
 
 	$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_rdm_quote' );
 
+
 	/**
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
